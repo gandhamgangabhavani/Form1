@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0px;
+            margin:0px;
+        }
+        body{
+ background: rgb(63,94,251);
+background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+display:grid;
+place-items: center;
+height:100vh;
+        }
+        .container{
+            background-color: white;
+            height:60vh;
+            padding: 10px;
+            display: grid;
+            grid-template-areas: 
+            't .'
+            'h h1'
+            'f f';
+            }
+            .t{
+                grid-area: t;
+            }
+            .h{
+             grid-area: h;
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+             align-items: center;
+             /* height: 70vh; */
+             width: 20vw;
+              }
+           .h1{
+            grid-area: h1;
+            display: flex;
+             flex-direction: column;
+             justify-content: center;
+             align-items: center;
+             /* height: 70vh; */
+             width: 20vw;
+           }
+           #f{
+            grid-area: f;
+            display: flex;
+            flex-direction: column;
+             /* justify-content: center; */
+             /* align-items: center; */
+             /* height: 70vh; */
+             width: 40vw;
+             padding: 0px 40px;
+           }
+           input {
+            padding: 5px;
+            width: 100%;
+           }
+           select{
+            padding: 5px;
+            width: 100%;
+           }
+           button{
+            background-color: rgb(15, 158, 247);
+            color:white;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+           }
+           @media screen and (max-width:768px){
+        .body{
+            width: auto;
+            height: auto;
+        }
+        .container{
+            width: auto;
+            height: auto;
+        }
+        .h{
+            width: auto;
+            height: auto; 
+        }
+        .h1{
+            width: auto;
+            height: auto; 
+        }
+        .f{
+            width: auto;
+             padding: auto;
+        }
+    }
+
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="t">
+        <h1>Registration Form </h1>
+        </div>
+        <br>
+       <div class="h">
+       
+    <form>
+        <div>
+        <label>First Name</label><br>
+        <input type="text" placeholder="jhony">
+        </div><br>
+        <div>
+        <label>Birthdate</label><br>
+        <input type="date">
+        </div><br>
+        <div>
+            <label>Email</label><br>
+            <input type="email">
+            </div>
+                      
+    </form>
+
+       </div>
+       <!-- <div class="f">
+        <label>Subject</label>
+        <select>
+            <option>Coose Option</option>
+            <option>Maths</option>
+            <option>Statistics</option>
+            <option>Computer Science</option>
+        </select>
+       </div> -->
+
+       <div class="h1">
+        
+    <form>
+        <div>
+        <label>Last Name</label><br>
+        <input type="text" placeholder="papa">
+        </div><br>
+        <div>
+        <label>Gender</label><br><br>
+        <div style="display: flex;flex-direction: row;">
+        <input type="radio">Male
+        <input type="radio">Female
+        </div>
+        </div><br>
+        <div>
+            <label>Phone</label><br>
+            <input type="text">
+            </div>
+                      
+    </form>
+
+       </div>
+
+       <div id="f">
+        <form>
+        <label>Subject</label>
+        <select>
+            <option>Coose Option</option>
+            <option>Maths</option>
+            <option>Statistics</option>
+            <option>Computer Science</option>
+        </select><br><br>
+        <button>Submit</button>
+        </form>
+        
+       </div>
+    </div>
+</body>
+</html>
